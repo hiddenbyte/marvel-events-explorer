@@ -1,17 +1,13 @@
 marvel-events-explorer
 ======================
 
-### Goal
+### 1. Goal
 
 This project aims to create something cool with the Marvel Comics API - http://developer.marvel.com/docs -.
 
-### Components
 
-#### Developer API proxy
+### 2. Development
 
-Usage
+#### Developer api proxy
 
-''' 
-  sdf
-
-'''
+To speedup client-side (browser-based) applications (e.g. simple html file) development with the Marvel api, a proxy was created for the api.
