@@ -38,8 +38,11 @@ var server = http.createServer(function(req, proxy_response) {
 
 	var request_marvel = http.request(marvel_request_url, function(marvel_response) {
 
-		for(var header_name in marvel_response.headers)
+		for(var header_name in marvel_response.headers) {
 			proxy_response.setHeader(header_name, marvel_response.headers[header_name]);
+		}
+		
+		proxy_response.setHeader('Access-Control-Allow-Origin', '*');
 
 		marvel_response.on('data', function(chunk) {
 			proxy_response.write(chunk);
